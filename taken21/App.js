@@ -2,6 +2,7 @@ import React from 'react';
 import FrontPage from './FrontPage'
 import StartingStory from './StartingStory'
 import MissionPage from './MissionPage'
+import Location from './Location'
 
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
@@ -31,7 +32,8 @@ const styles = StyleSheet.create({
 const TopNavigator = StackNavigator({
   FrontPage: { screen: FrontPage},
   StartingStory: {screen: StartingStory},
-  MissionPage: {screen: MissionPage}
+  MissionPage: {screen: MissionPage},
+  Location: {screen: Location}
 });
 
 AppRegistry.registerComponent('TopNavigator', () => TopNavigator);

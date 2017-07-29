@@ -3,10 +3,12 @@ import { FlatList,Image,StyleSheet, View, ScrollView, TouchableOpacity} from 're
 
 export default class MissionPage extends React.Component{
 	render(){
+		const { navigate } = this.props.navigation;
+
 		return(
 				<ScrollView contentContainerStyle={styles.container}>
 					<TouchableOpacity 
-						onPress={()=>null} 
+						onPress={()=>navigate("Location")} 
 						style={styles.button}>
 						<Image
 							style = {styles.image}
@@ -18,7 +20,7 @@ export default class MissionPage extends React.Component{
 					<View style={styles.progresscircle}/>
 
 					<TouchableOpacity 
-						onPress={()=>null} 
+						onPress={()=>navigate("Location")} 
 						style={styles.button}>
 						<Image
 							style = {styles.image}
@@ -30,7 +32,7 @@ export default class MissionPage extends React.Component{
 					<View style={styles.progresscircle}/>
 
 					<TouchableOpacity 
-						onPress={()=>null} 
+						onPress={()=>navigate("Location")} 
 						style={styles.button}>
 						<Image
 							style = {styles.image}
@@ -42,7 +44,7 @@ export default class MissionPage extends React.Component{
 					<View style={styles.progresscircle}/>
 
 					<TouchableOpacity 
-						onPress={()=>null} 
+						onPress={()=>navigate("Location")} 
 						style={styles.button}>
 						<Image
 							style = {styles.image}
@@ -54,7 +56,7 @@ export default class MissionPage extends React.Component{
 					<View style={styles.progresscircle}/>
 
 					<TouchableOpacity 
-						onPress={()=>null} 
+						onPress={()=>navigate("Location")} 
 						style={styles.button}>
 						<Image
 							style = {styles.image}

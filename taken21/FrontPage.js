@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Text, View, Button } from 'react-native';
 
 export default class FrontPage extends React.Component {
 	static navigationOptions = {
@@ -8,15 +8,24 @@ export default class FrontPage extends React.Component {
   render() {
   	const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>BREAKOUT</Text>
-        <Button 
-        	title="New Game"
-        	onPress={() => navigate('StartingStory')} />
-        <Button 
-        title="Continue"
-        onPress={()=>null} />
-      </View>
+      // <View style={styles.container}>
+      	<Image
+        	source={require('./breakout.jpeg')}
+        	style={styles.container}>
+        <View 
+        	style={styles.buttoncontainer}>
+	        <Button 
+	        	title="New Game"
+	        	onPress={() => navigate('StartingStory')} 
+	        	style={styles.button}/>
+
+	        <Button 
+	        title="Continue"
+	        onPress={()=>null} 
+	        style={styles.button}/>
+	      </View>
+        </Image>
+      // </View>
     );
   }
 }
@@ -24,12 +33,24 @@ export default class FrontPage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    width: undefined,
+    height: undefined,
+    backgroundColor: 'transparent',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end'
   },
 
   text: {
   	fontSize: 50
+  },
+
+  button: {
+  },
+
+  buttoncontainer: {
+  	alignItems: 'center',
+  	justifyContent: 'space-around',
+  	height: 100,
+  	marginBottom: 150
   }
 });
