@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList,Image,StyleSheet, Text, ScrollView, TouchableOpacity} from 'react-native';
+import { FlatList,Image,StyleSheet, View, ScrollView, TouchableOpacity} from 'react-native';
 
 export default class MissionPage extends React.Component{
 	render(){
@@ -14,6 +14,9 @@ export default class MissionPage extends React.Component{
 						/>
 					</TouchableOpacity>
 
+					<View style={styles.progresscircle}/>
+					<View style={styles.progresscircle}/>
+
 					<TouchableOpacity 
 						onPress={()=>null} 
 						style={styles.button}>
@@ -22,6 +25,10 @@ export default class MissionPage extends React.Component{
 							source={require('./location.jpg')}
 						/>
 					</TouchableOpacity>
+
+					<View style={styles.progresscircle}/>
+					<View style={styles.progresscircle}/>
+
 					<TouchableOpacity 
 						onPress={()=>null} 
 						style={styles.button}>
@@ -30,6 +37,10 @@ export default class MissionPage extends React.Component{
 							source={require('./location.jpg')}
 						/>
 					</TouchableOpacity>
+
+					<View style={styles.progresscircle}/>
+					<View style={styles.progresscircle}/>
+
 					<TouchableOpacity 
 						onPress={()=>null} 
 						style={styles.button}>
@@ -38,6 +49,10 @@ export default class MissionPage extends React.Component{
 							source={require('./location.jpg')}
 						/>
 					</TouchableOpacity>
+
+					<View style={styles.progresscircle}/>
+					<View style={styles.progresscircle}/>
+
 					<TouchableOpacity 
 						onPress={()=>null} 
 						style={styles.button}>
@@ -73,6 +88,14 @@ const styles = StyleSheet.create({
   },
   item: {
   	fontSize: 100
+  },
+  progresscircle: {
+  	width: 10,
+  	height: 10,
+  	borderRadius: 5,
+  	backgroundColor: 'orange',
+  	marginTop: 10,
+  	marginBottom: 10
   }
 
 });
